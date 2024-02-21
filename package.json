@@ -1,15 +1,22 @@
 {
   "name": "medusa-fulfillment-kaduna",
-  "version": "1.1.39",
-  "description": "A manual fulfillment provider for Medusa In Kaduna",
-  "main": "index.js",
+  "version": "1.0.00",
+  "description": "A manual fulfillment provider for Medusa In Kaduna, Nigeria",
+  "author": "Jamal Ibrahim Umar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/captjay98/medusa-fulfillment-kaduna.git"
+  },
+  "keywords": [
+    "medusa-plugin",
+    "medusa-plugin-fulfillment"
+  ],
   "files": [
     "dist"
   ],
   "engines": {
     "node": ">=16"
   },
-  "author": "Jamal Ibrahim Umar",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -25,7 +32,7 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "prepare": "pnpm run build",
+    "prepare": "cross-env NODE_ENV=production npm run build",
     "dev": "tsc -p tsconfig.build.json --watch",
     "test:watch": "jest --watch",
     "test": "jest --ci --coverage"
@@ -39,10 +46,5 @@
     "@babel/runtime": "^7.7.6",
     "express": "^4.17.1",
     "medusa-core-utils": "^1.2.1"
-  },
-  "gitHead": "7770046479c361f375842a8605b15e5d7bc24624",
-  "keywords": [
-    "medusa-plugin",
-    "medusa-plugin-fulfillment"
-  ]
+  }
 }
